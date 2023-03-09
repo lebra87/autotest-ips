@@ -10,5 +10,5 @@ const cats: Cat[] = [
     {name: 'Васька', breed: 'Беспородный'},
 ]
 cats.forEach(cat => {
-    console.log(`Кличка: ${cat.name}\nПорода: ${cat.breed}\nВозраст: ${cat.age}\n`)
-});
+    console.log(`Кличка: ${cat.name}\nПорода: ${cat.breed}\nВозраст: ${cat.age ? cat.age : '-'}\n`)
+})

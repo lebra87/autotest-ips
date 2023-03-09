@@ -1,15 +1,10 @@
 {
     const promise = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            reject('reject')
-        }, 100)
+        setTimeout(() => resolve('resolve'), 1000)
+        setTimeout(() => reject('reject'), 100)
     })
 
-    async function print() {
-        return await promise
+    async function print(): Promise<void> {
+        console.log(await promise)
     }
-
-    print().catch(error => {
-        console.log(error)
-    })
 }

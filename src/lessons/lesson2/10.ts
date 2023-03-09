@@ -1,27 +1,23 @@
 {
     class Car {
-        private turn: boolean = false
+        private isTurn: boolean = false
         private speed: number = 0
 
-        public turnOn() {
-            this.turn = true
+        public turnOn(): void {
+            this.isTurn = true
         }
 
-        public turnOff() {
-            this.turn = !(this.speed === 0)
-            if (this.turn)
-                console.log('Невозможно выключить двигатель на скорости!')
+        public turnOff(): void { //нужны типы методам
+            this.speed === 0 ? this.isTurn = false : console.log('Невозможно выключить двигатель на скорости!')
         }
 
-        public getState() {
+        public getState(): void {
             let state: string = 'выключен'
-            if (this.turn)
-                state = 'включен'
-            console.log(`Двигатель ${state}, скорость: ${this.speed} км/ч`)
+            this.isTurn ? state = 'включен' : console.log(`Двигатель ${state}, скорость: ${this.speed} км/ч`)
         }
 
-        public setSpeed(speed: number) {
-            if (this.turn) {
+        public setSpeed(speed: number): void {
+            if (this.isTurn) {
                 if (speed >= 0 && speed <= 100) {
                     this.speed = speed
                 } else {
@@ -35,16 +31,17 @@
 
     const car: Car = new Car()
     car.getState()
-    car.setSpeed(60)
+    // car.setSpeed(60)
     car.turnOn()
-    car.getState()
-    car.setSpeed(-5)
-    car.getState()
-    car.setSpeed(20)
-    car.getState()
     car.turnOff()
-    car.setSpeed(0)
-    car.getState()
-    car.turnOff()
-    car.getState()
+    // car.getState()
+    // car.setSpeed(-5)
+    // car.getState()
+    // car.setSpeed(20)
+    // car.getState()
+    // car.turnOff()
+    // car.setSpeed(0)
+    // car.getState()
+    // car.turnOff()
+    // car.getState()
 }

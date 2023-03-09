@@ -1,15 +1,11 @@
 {
-    const promise = new Promise((resolve) => {
-        setTimeout(() => {
-            resolve('resolve')
-        }, 1000)
+    const promise: Promise<string> = new Promise((resolve) => {
+        setTimeout(() => resolve('resolve'), 1000)
     })
 
-    async function print() {
-        return await promise
+    async function print():Promise<void> {
+        console.log(await promise)
     }
 
-    print().then(value => {
-        console.log(value)
-    })
+    print()
 }

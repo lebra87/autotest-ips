@@ -1,23 +1,22 @@
 class Car {
-    private turn: boolean = false
+    private isTurn: boolean = false
 
-    public turnOn() {
-        this.turn = true
+    public turnOn(): void {
+        this.isTurn = true
     }
 
-    public turnOff() {
-        this.turn = false
+    public turnOff(): void {
+        this.isTurn = false
     }
 
-    public getState() {
-        let state: string = 'off'
-        if (this.turn)
-            state = 'on'
-        console.log(`Car is turn ${state}`)
+    public getState(): void {
+        this.isTurn ? console.log(`Car is turn on`) : console.log(`Car is turn off`)
     }
 }
 
 const car: Car = new Car()
 car.getState()
 car.turnOn()
+car.getState()
+car.turnOff()
 car.getState()
