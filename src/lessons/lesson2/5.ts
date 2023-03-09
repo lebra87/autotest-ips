@@ -10,7 +10,7 @@ class Car {
     }
 
     public getState(): void {
-        this.isTurn ? console.log(`Car is turn on`) : console.log(`Car is turn off`)
+        console.log(`Car is turn ${this.isTurn ? 'on' : 'off'}`)
     }
 }
 

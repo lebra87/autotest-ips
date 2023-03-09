@@ -3,7 +3,7 @@
         setTimeout(() => resolve('resolve'), 1000)
     })
 
-    async function print():Promise<void> {
+    async function print(): Promise<void> {
         console.log(await promise)
     }
 

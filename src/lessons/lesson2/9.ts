@@ -7,4 +7,5 @@
     async function print(): Promise<void> {
         console.log(await promise)
     }
+    print()
 }
