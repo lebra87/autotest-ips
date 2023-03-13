@@ -5,7 +5,11 @@
     })
 
     async function print(): Promise<void> {
-        console.log(await promise)
+        try {
+            console.log(await promise)
+        } catch (err) {
+            console.log(err)
+        }
     }
     print()
 }
