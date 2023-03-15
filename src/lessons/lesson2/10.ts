@@ -13,30 +13,36 @@
 
         public getState(): void {
             let state: string = 'выключен'
-            this.isTurn ? state = 'включен' : console.log(`Двигатель ${state}, скорость: ${this.speed} км/ч`)
+            if (this.isTurn)
+                state = 'включен'
+            console.log(`Двигатель ${state}, скорость: ${this.speed} км/ч`)
+        }
+
+        protected canSetSpeed(speed: number): boolean{
+            if (!this.isTurn ) {
+                console.log('Нельзя изменить скорость! Двигатель не включен!')
+                return false
+            }
+            let isValidSpeed: boolean = speed >= 0 && speed <= 100;
+            if (!isValidSpeed)
+                console.log('Введенное значение скорости не верно!')
+            return isValidSpeed
         }
 
         public setSpeed(speed: number): void {
-            if (this.isTurn) {
-                if (speed >= 0 && speed <= 100) {
-                    this.speed = speed
-                } else {
-                    console.log('Введенное значение скорости не верно!')
-                }
-            } else {
-                console.log('Нельзя изменить скорость! Двигатель не включен!')
-            }
+            if (this.canSetSpeed(speed))
+                this.speed = speed
         }
     }
 
     const car: Car = new Car()
     car.getState()
-    // car.setSpeed(60)
+    //car.setSpeed(60)
     car.turnOn()
-    car.turnOff()
-    // car.getState()
-    // car.setSpeed(-5)
-    // car.getState()
+    //car.turnOff()
+    car.getState()
+    car.setSpeed(5)
+    car.getState()
     // car.setSpeed(20)
     // car.getState()
     // car.turnOff()
