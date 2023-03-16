@@ -7,25 +7,33 @@
             this.isTurn = true
         }
 
-        public turnOff(): void { //нужны типы методам
-            this.speed === 0 ? this.isTurn = false : console.log('Невозможно выключить двигатель на скорости!')
+        public turnOff(): void {
+            this.speed === 0
+                ? this.isTurn = false
+                : console.log('Невозможно выключить двигатель на скорости!')
         }
 
         public getState(): void {
             let state: string = 'выключен'
-            if (this.isTurn)
+
+            if (this.isTurn) {
                 state = 'включен'
+            }
+
             console.log(`Двигатель ${state}, скорость: ${this.speed} км/ч`)
         }
 
-        protected canSetSpeed(speed: number): boolean{
-            if (!this.isTurn ) {
+        protected canSetSpeed(speed: number): boolean {
+            if (!this.isTurn) {
                 console.log('Нельзя изменить скорость! Двигатель не включен!')
                 return false
             }
-            let isValidSpeed: boolean = speed >= 0 && speed <= 100;
-            if (!isValidSpeed)
+            const isValidSpeed: boolean = speed >= 0 && speed <= 100;
+
+            if (!isValidSpeed) {
                 console.log('Введенное значение скорости не верно!')
+            }
+
             return isValidSpeed
         }
 
@@ -45,9 +53,9 @@
     car.getState()
     // car.setSpeed(20)
     // car.getState()
-    // car.turnOff()
-    // car.setSpeed(0)
-    // car.getState()
-    // car.turnOff()
-    // car.getState()
+    car.turnOff()
+    car.setSpeed(0)
+    car.getState()
+    car.turnOff()
+    car.getState()
 }
