@@ -1,5 +1,6 @@
 import {ChainablePromiseElement} from 'webdriverio'
-import {UserSettingsData} from '../../data/userSettings.data'
+import {UserData} from '../../common/data/user.data'
+
 
 class SettingsProfilePage {
     protected browser: WebdriverIO.Browser
@@ -9,7 +10,7 @@ class SettingsProfilePage {
         this.browser = browser
     }
 
-    public async setUserName(userSettings: UserSettingsData): Promise<void> {
+    public async setUserName(userSettings: UserData): Promise<void> {
         await this.getUserName().setValue(userSettings.userName)
         await this.updateProfile().click()
     }
@@ -18,15 +19,19 @@ class SettingsProfilePage {
         return this.getPublicEmail().isClickable()
     }
 
-    public async setUserBio(userSettings: UserSettingsData): Promise<void> {
-        await this.getUserBio().setValue(userSettings.userBio)
-        await this.updateProfile()
-    }
+    // public async setUserBio(userSettings: UserData): Promise<void> {
+    //     await this.getUserBio().setValue(userSettings.userBio)
+    //     await this.updateProfile()
+    // }
 
-    public async setUserPronouns(userSettings: UserSettingsData): Promise<void> {
-        await this.getPronouns().click()
-        await this.getPronouns().setValue(userSettings.userPronouns)
-        await this.updateProfile()
+    // public async setUserPronouns(userSettings: UserSettingsData): Promise<void> {
+    //     await this.getPronouns().click()
+    //     await this.getPronouns().setValue(userSettings.userPronouns)
+    //     await this.updateProfile()
+    // }
+
+    public async setPicture(): Promise<void> {
+        await this.setNewProfileButton().click()
     }
 
     public async open(): Promise<void> {
@@ -40,12 +45,12 @@ class SettingsProfilePage {
         })
     }
 
-    public async uploadFile(userAvatar: string): Promise<void> {
+    public async uploadFile(filePath: string): Promise<void> {
         await this.getInputFile().waitForExist({
             timeoutMsg: 'File input field was not exist',
         })
         await this.showHiddenFileInput(this.browser)
-        const file: string = await this.browser.uploadFile(userAvatar)
+        const file: string = await this.browser.uploadFile(filePath)
         await this.getInputFile().setValue(file)
     }
 
@@ -69,9 +74,13 @@ class SettingsProfilePage {
         return this.browser.$('//*[@id="user_profile_bio"]')
     }
 
-    // private getUserPronouns(): ChainablePromiseElement<WebdriverIO.Element> {
-    //     return this.browser.$('//*[@value="she/her"]')
-    // }
+    private setNewProfileButton(): ChainablePromiseElement<WebdriverIO.Element> {
+        return this.browser.$('//*[contains(@class,"Button--fullWidth")]')
+    }
+
+    private getUserPronouns(): ChainablePromiseElement<WebdriverIO.Element> {
+         return this.browser.$('//*[@value="she/her"]')
+    }
 
     private updateProfile(): ChainablePromiseElement<WebdriverIO.Element> {
         return this.browser.$('//button[@data-target="waiting-form.submit"]')

@@ -1,4 +1,4 @@
-import {UserData} from '../data/userLogin.data'
+import {UserData} from '../../common/data/user.data'
 
 type UserModel = {
     login: string,

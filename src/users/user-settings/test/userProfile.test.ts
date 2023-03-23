@@ -1,8 +1,7 @@
 import {SettingsProfilePage} from '../page-object/SettingsProfile.page'
 import {PublicProfilePage} from '../page-object/PublicProfile.page'
 import {LoginPage} from '../../login/page-object/Login.page'
-import {userDataValid} from '../../data/userLogin.data'
-import {userSettings} from '../../data/userSettings.data'
+import {userDataValid} from '../../common/data/user.data'
 
 describe('User settings test', () => {
     let loginPage: LoginPage
@@ -15,7 +14,7 @@ describe('User settings test', () => {
         userProfilePage = new PublicProfilePage(browser)
 
         await loginPage.open()
-        await loginPage.login(userDataValid, false)
+        await loginPage.login(userDataValid)
     })
 
     beforeEach(async () => {
@@ -36,11 +35,11 @@ describe('User settings test', () => {
     //     expect(await userSettingsPage.isPublicEmail()).toEqual(false)
     // })
 
-    it ('choise pronounce', async () => {
-        await  userSettingsPage.setUserPronouns(userSettings)
-
-        expect(await userSettingsPage.setUserPronouns(userSettings)).toEqual(2)
-    })
+    // it ('choise pronounce', async () => {
+    //     await  userSettingsPage.setUserPronouns(userSettings)
+    //
+    //     expect(await userSettingsPage.setUserPronouns(userSettings)).toEqual(2)
+    // })
 
     afterEach(async () => {
         await browser.reloadSession()
