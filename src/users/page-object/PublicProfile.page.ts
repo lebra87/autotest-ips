@@ -8,12 +8,12 @@ class PublicProfilePage {
         this.browser = browser
     }
 
-    public userName(): Promise<string> {
+    public setUserName(): Promise<string> {
         return this.getUserName().getText()
     }
 
-    public async userJoined(): Promise<void> {
-        await this.getUserJoined().getText()
+    public setUserBio(): Promise<string> {
+        return this.getUserBio().getText()
     }
 
     public async open(): Promise<void> {
@@ -24,7 +24,7 @@ class PublicProfilePage {
         return this.browser.$('//span[contains(@class,"p-name")]')
     }
 
-    private getUserJoined(): ChainablePromiseElement<WebdriverIO.Element> {
+    private getUserBio(): ChainablePromiseElement<WebdriverIO.Element> {
         return this.browser.$('//div[contains(@class,"p-note")]')
     }
 }

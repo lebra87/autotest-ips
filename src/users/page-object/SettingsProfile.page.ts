@@ -1,5 +1,4 @@
 import {ChainablePromiseElement} from 'webdriverio'
-import {UserData} from '../../common/data/user.data'
 
 
 class SettingsProfilePage {
@@ -10,8 +9,8 @@ class SettingsProfilePage {
         this.browser = browser
     }
 
-    public async setUserName(userSettings: UserData): Promise<void> {
-        await this.getUserName().setValue(userSettings.userName)
+    public async setUserName(userName: string): Promise<void> {
+        await this.getUserName().setValue(userName)
         await this.updateProfile().click()
     }
 
@@ -19,10 +18,10 @@ class SettingsProfilePage {
         return this.getPublicEmail().isClickable()
     }
 
-    // public async setUserBio(userSettings: UserData): Promise<void> {
-    //     await this.getUserBio().setValue(userSettings.userBio)
-    //     await this.updateProfile()
-    // }
+    public async setUserBio(userBio: string): Promise<void> {
+        await this.getUserBio().setValue(userBio)
+        await this.updateProfile().click()
+    }
 
     // public async setUserPronouns(userSettings: UserSettingsData): Promise<void> {
     //     await this.getPronouns().click()
@@ -31,7 +30,7 @@ class SettingsProfilePage {
     // }
 
     public async setPicture(): Promise<void> {
-        await this.setNewProfileButton().click()
+        await this.getNewProfileButton().click()
     }
 
     public async open(): Promise<void> {
@@ -74,7 +73,7 @@ class SettingsProfilePage {
         return this.browser.$('//*[@id="user_profile_bio"]')
     }
 
-    private setNewProfileButton(): ChainablePromiseElement<WebdriverIO.Element> {
+    private getNewProfileButton(): ChainablePromiseElement<WebdriverIO.Element> {
         return this.browser.$('//*[contains(@class,"Button--fullWidth")]')
     }
 

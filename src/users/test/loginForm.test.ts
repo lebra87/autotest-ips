@@ -7,8 +7,6 @@ describe('Login form test', () => {
     let loginPage: LoginPage
     let mainPage: MainPage
     const userValid: UserModel = createUserModel(userDataValid)
-    // убрать модель инвалида
-    const userInvalid: UserModel = createUserModel(userDataInvalid)
 
     before( () => {
         loginPage = new LoginPage(browser)
@@ -38,7 +36,8 @@ describe('Login form test', () => {
     })
 
     it('block with the error should be displayed with wrong login and password', async () => {
-        await loginPage.login(userDataInvalid)
+        await loginPage.setLogin(userDataInvalid.login)
+        await loginPage.setPassword(userDataInvalid.password)
         await loginPage.submit()
 
         expect(await loginPage.isErrorMessage()).toEqual(true)

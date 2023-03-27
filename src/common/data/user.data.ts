@@ -1,4 +1,4 @@
-import {EMAIL, LOGIN, PASSWORD} from '../../../../credential'
+import {EMAIL, LOGIN, PASSWORD} from '../../../credential'
 
 type UserData = {
     login: string,
@@ -18,6 +18,24 @@ enum Pronouns {
     CUSTOM = 'custom',
 }
 
+enum UserFirstName {
+    Ivan,
+    Petr,
+    Mike,
+    Elena,
+    Milana,
+    Maria,
+}
+
+enum UserSecondName {
+    SecondName1,
+    SecondName2,
+    SecondName3,
+    SecondName4,
+    SecondName5,
+    SecondName6,
+}
+
 const userDataValid: UserData = {
     login: LOGIN,
     email: EMAIL,
@@ -30,8 +48,17 @@ const userDataInvalid: UserData = {
     password: '95eweq',
 }
 
+// const userSettings: UserData = {
+//     login: LOGIN,
+//     password: PASSWORD,
+//     userName: 'Ivan Ivanov'
+// }
+
 export {
     UserData,
     userDataValid,
     userDataInvalid,
+    //userSettings,
+    UserFirstName,
+    UserSecondName,
 }

@@ -1,18 +1,20 @@
-import {LoginPage} from '../../login/page-object/Login.page'
+import {LoginPage} from '../page-object/Login.page'
 import {SettingsProfilePage} from '../page-object/SettingsProfile.page'
 import {userDataValid} from '../../common/data/user.data'
+import {createUserModel, UserModel} from '../model/user.model'
 
 
 describe('Upload image', () => {
     let loginPage: LoginPage
     let profilePage: SettingsProfilePage
     const filePath = 'src/users/common/data/img_jpg.jpg'
+    const userValid: UserModel = createUserModel(userDataValid)
 
     before(async () => {
         loginPage = new LoginPage(browser)
         profilePage = new SettingsProfilePage(browser)
         await loginPage.open()
-        await loginPage.login(userDataValid)
+        await loginPage.login(userValid)
         await browser.url('https://github.com/settings/profile')
     })
 
