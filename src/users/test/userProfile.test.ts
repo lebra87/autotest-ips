@@ -11,8 +11,8 @@ describe('User settings test', () => {
     let profilePage: SettingsProfilePage
     const filePath = 'src/common/data/img_jpg.jpg'
     const userValid: UserModel = createUserModel(userDataValid)
-    let userName: string = getRandomUserNameAndBio(6)
-    let userBio: string = getRandomUserNameAndBio(20)
+    let userName: string = getRandomUserNameAndBio()
+    let userBio: string = getRandomUserNameAndBio()
 
     before(async () => {
         loginPage = new LoginPage(browser)
@@ -32,14 +32,14 @@ describe('User settings test', () => {
         await userSettingsPage.setUserName(userName)
         await userPublicPage.open()
 
-        expect(await userPublicPage.setUserName()).toEqual(userName)
+        expect(await userPublicPage.setName()).toEqual(userName)
     })
 
     it ('change user bio', async () => {
         await userSettingsPage.setUserBio(userBio)
         await userPublicPage.open()
 
-        expect(await userPublicPage.setUserBio()).toEqual(userBio)
+        expect(await userPublicPage.setBio()).toEqual(userBio)
     })
 
     it ('dropdown with Public email is blocking', async () => {
@@ -49,9 +49,9 @@ describe('User settings test', () => {
     })
 
     // it ('choise pronounce', async () => {
-    //     await  userSettingsPage.setUserPronouns(userSettings)
+    //     await  userSettingsPage.setUserPronouns(Pronouns.SHE_HER)
     //
-    //     expect(await userSettingsPage.setUserPronouns(userSettings)).toEqual(2)
+    //     expect(await userPublicPage.setPronounce()).toEqual(Pronouns.SHE_HER)
     // })
 
     // it('photo should be uploaded in profile', async () => {

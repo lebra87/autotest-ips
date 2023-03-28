@@ -1,4 +1,5 @@
 import {ChainablePromiseElement} from 'webdriverio'
+import {Pronouns} from '../../common/data/user.data'
 
 
 class SettingsProfilePage {
@@ -23,11 +24,11 @@ class SettingsProfilePage {
         await this.updateProfile().click()
     }
 
-    // public async setUserPronouns(userSettings: UserSettingsData): Promise<void> {
-    //     await this.getPronouns().click()
-    //     await this.getPronouns().setValue(userSettings.userPronouns)
-    //     await this.updateProfile()
-    // }
+    public async setUserPronouns(pronouns: Pronouns): Promise<void> {
+        await this.getPronouns().click()
+        await this.getPronouns().setValue(Pronouns.SHE_HER)
+        await this.updateProfile()
+    }
 
     public async setPicture(): Promise<void> {
         await this.getNewProfileButton().click()
@@ -77,9 +78,9 @@ class SettingsProfilePage {
         return this.browser.$('//*[contains(@class,"Button--fullWidth")]')
     }
 
-    private getUserPronouns(): ChainablePromiseElement<WebdriverIO.Element> {
-         return this.browser.$('//*[@value="she/her"]')
-    }
+    // private getUserPronouns(): ChainablePromiseElement<WebdriverIO.Element> {
+    //      return this.browser.$('//*[@value=${pronouns[SHE_HER]}')
+    // }
 
     private updateProfile(): ChainablePromiseElement<WebdriverIO.Element> {
         return this.browser.$('//button[@data-target="waiting-form.submit"]')

@@ -15,11 +15,16 @@ function createUserModel(userData: UserData): UserModel {
         password: userData.password,
     }
 }
-function getRandomUserNameAndBio(length: number): string {
-    let rnd: string = '';
-    while (rnd.length < length)
-        rnd += Math.random().toString(36).substring(2);
-    return rnd.substring(0, length)
+function getRandomUserNameAndBio(): string {
+    let rnd: string = 'user-'
+    let timeNow = new Date()
+    rnd += `${timeNow.toISOString()}`
+    return rnd
+
+    // let rnd: string = '';
+    // while (rnd.length < length)
+    //     rnd += Math.random().toString(36).substring(2)+' @lebra87 ';
+    // return rnd.substring(0, length)
 
     //const chrs: string = 'abdehkmnpswxzABDEFGHKMNPQRSTWXZ123456789'
     //var str: string = ''

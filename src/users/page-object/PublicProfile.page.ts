@@ -8,12 +8,16 @@ class PublicProfilePage {
         this.browser = browser
     }
 
-    public setUserName(): Promise<string> {
+    public setName(): Promise<string> {
         return this.getUserName().getText()
     }
 
-    public setUserBio(): Promise<string> {
+    public setBio(): Promise<string> {
         return this.getUserBio().getText()
+    }
+
+    public setPronounce(): Promise<string> {
+        return this.getUserPronouns().getText()
     }
 
     public async open(): Promise<void> {
@@ -26,6 +30,10 @@ class PublicProfilePage {
 
     private getUserBio(): ChainablePromiseElement<WebdriverIO.Element> {
         return this.browser.$('//div[contains(@class,"p-note")]')
+    }
+
+    private getUserPronouns(): ChainablePromiseElement<WebdriverIO.Element> {
+        return this.browser.$('//*[@itemprop="pronouns"]')
     }
 }
 

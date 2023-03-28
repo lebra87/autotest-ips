@@ -61,4 +61,5 @@ export {
     //userSettings,
     UserFirstName,
     UserSecondName,
+    Pronouns,
 }
