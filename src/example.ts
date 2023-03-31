@@ -17,8 +17,10 @@ function getRandomString(length: number): string {
     // return str
 }
 
-function getCurrentTime() {
-    
+function getRandomUserNameAndBio(): string {
+    let rnd: string = 'user-'
+    let timeNow = new Date()
+    rnd += `${timeNow.toISOString()}`
+    return rnd
 }
-
-console.log(getRandomString(5))
+console.log(getRandomUserNameAndBio())

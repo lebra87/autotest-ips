@@ -1,13 +1,15 @@
 import {EMAIL, LOGIN, PASSWORD} from '../../../credential'
+import {getTimeStamp} from '../getTimeStamp'
 
 type UserData = {
     login: string,
     email: string,
     password: string,
     userName?: string,
+    userAvatar?: string,
     // isPublicEmail?: boolean,
-    // userPronouns?: Pronouns,
-    // userBio?: string,
+    userPronouns?: Pronouns,
+    userBio?: string,
 }
 
 enum Pronouns {
@@ -18,34 +20,21 @@ enum Pronouns {
     CUSTOM = 'custom',
 }
 
-enum UserFirstName {
-    Ivan,
-    Petr,
-    Mike,
-    Elena,
-    Milana,
-    Maria,
-}
-
-enum UserSecondName {
-    SecondName1,
-    SecondName2,
-    SecondName3,
-    SecondName4,
-    SecondName5,
-    SecondName6,
-}
-
 const userDataValid: UserData = {
     login: LOGIN,
     email: EMAIL,
     password: PASSWORD,
+    userName: `user-${getTimeStamp()}`,
+    userBio: `bio-${getTimeStamp()}`,
+    userPronouns: Pronouns.SHE_HER,
+    userAvatar: 'src/users/common/data/img_jpg.jpg'
 }
 
 const userDataInvalid: UserData = {
     login: 'nimatat388',
     email: 'niv@mk.ty',
     password: '95eweq',
+    userAvatar: 'src/users/common/data/img_png.png'
 }
 
 // const userSettings: UserData = {
@@ -59,7 +48,5 @@ export {
     userDataValid,
     userDataInvalid,
     //userSettings,
-    UserFirstName,
-    UserSecondName,
     Pronouns,
 }

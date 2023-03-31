@@ -1,4 +1,4 @@
-import {UserData} from '../../common/data/user.data'
+import {Pronouns, UserData} from '../../common/data/user.data'
 
 type UserModel = {
     login: string,
@@ -6,6 +6,7 @@ type UserModel = {
     password: string,
     userName?: string,
     userBio?: string,
+    userPronouns?: Pronouns,
 }
 
 function createUserModel(userData: UserData): UserModel {
@@ -13,32 +14,14 @@ function createUserModel(userData: UserData): UserModel {
         login: userData.login,
         email: userData.email,
         password: userData.password,
+        userName: userData.userName,
+        userBio: userData.userBio,
+        userPronouns: userData.userPronouns,
+        //userAvatar: userData.userAvatar,
     }
 }
-function getRandomUserNameAndBio(): string {
-    let rnd: string = 'user-'
-    let timeNow = new Date()
-    rnd += `${timeNow.toISOString()}`
-    return rnd
-
-    // let rnd: string = '';
-    // while (rnd.length < length)
-    //     rnd += Math.random().toString(36).substring(2)+' @lebra87 ';
-    // return rnd.substring(0, length)
-
-    //const chrs: string = 'abdehkmnpswxzABDEFGHKMNPQRSTWXZ123456789'
-    //var str: string = ''
-    //str = UserFirstName[]
-    //for (var i: number = 0; i < length; i++) {
-        //var pos = Math.floor(Math.random() * chrs.length)
-       // str += chrs.substring(pos, pos+1)
-   // }
-    //return str
-}
-
 
 export {
     UserModel,
     createUserModel,
-    getRandomUserNameAndBio,
 }

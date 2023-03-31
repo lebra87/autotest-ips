@@ -16,8 +16,12 @@ class PublicProfilePage {
         return this.getUserBio().getText()
     }
 
-    public setPronounce(): Promise<string> {
+    public getPronounceText(): Promise<string> {
         return this.getUserPronouns().getText()
+    }
+
+    public setAvatar(): Promise<string> {
+        return this.getUserAvatar().getAttribute('src')
     }
 
     public async open(): Promise<void> {
@@ -34,6 +38,10 @@ class PublicProfilePage {
 
     private getUserPronouns(): ChainablePromiseElement<WebdriverIO.Element> {
         return this.browser.$('//*[@itemprop="pronouns"]')
+    }
+
+    private getUserAvatar(): ChainablePromiseElement<WebdriverIO.Element> {
+        return this.browser.$('//img[contains(@class,"avatar-user width-full")]')
     }
 }
 

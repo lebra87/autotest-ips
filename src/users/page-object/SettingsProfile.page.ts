@@ -1,5 +1,5 @@
 import {ChainablePromiseElement} from 'webdriverio'
-import {Pronouns} from '../../common/data/user.data'
+import {UserModel} from '../model/user.model'
 
 
 class SettingsProfilePage {
@@ -24,14 +24,20 @@ class SettingsProfilePage {
         await this.updateProfile().click()
     }
 
-    public async setUserPronouns(pronouns: Pronouns): Promise<void> {
-        await this.getPronouns().click()
-        await this.getPronouns().setValue(Pronouns.SHE_HER)
-        await this.updateProfile()
+    public async setUserPronouns(user: UserModel): Promise<void> {
+        await this.getPronouns().waitForExist({
+            timeoutMsg: 'Pronouns field was not displayed',
+        })
+        await this.getPronouns().selectByAttribute('value', user.userPronouns!.toString())
+        await this.updateProfile().click()
     }
 
     public async setPicture(): Promise<void> {
+        await this.getPronouns().waitForExist({
+            timeoutMsg: 'Pronouns field was not displayed',
+        })
         await this.getNewProfileButton().click()
+        await this.updateProfile().click()
     }
 
     public async open(): Promise<void> {
@@ -52,6 +58,10 @@ class SettingsProfilePage {
         await this.showHiddenFileInput(this.browser)
         const file: string = await this.browser.uploadFile(filePath)
         await this.getInputFile().setValue(file)
+    }
+
+    public getErrorUploadAvatar(): Promise<boolean> {
+        return this.getErrorAvatarMessage().isDisplayed()
     }
 
     private getInputFile(): ChainablePromiseElement<WebdriverIO.Element> {
@@ -78,12 +88,12 @@ class SettingsProfilePage {
         return this.browser.$('//*[contains(@class,"Button--fullWidth")]')
     }
 
-    // private getUserPronouns(): ChainablePromiseElement<WebdriverIO.Element> {
-    //      return this.browser.$('//*[@value=${pronouns[SHE_HER]}')
-    // }
-
     private updateProfile(): ChainablePromiseElement<WebdriverIO.Element> {
         return this.browser.$('//button[@data-target="waiting-form.submit"]')
+    }
+
+    private getErrorAvatarMessage(): ChainablePromiseElement<WebdriverIO.Element> {
+        return this.browser.$('//*[@class="js-upload-avatar-image is-too-big"]')
     }
 }
 
