@@ -7,6 +7,7 @@ type UserModel = {
     userName?: string,
     userBio?: string,
     userPronouns?: Pronouns,
+    userAvatar?: string,
 }
 
 function createUserModel(userData: UserData): UserModel {
@@ -17,7 +18,7 @@ function createUserModel(userData: UserData): UserModel {
         userName: userData.userName,
         userBio: userData.userBio,
         userPronouns: userData.userPronouns,
-        //userAvatar: userData.userAvatar,
+        userAvatar: userData.userAvatar,
     }
 }
 

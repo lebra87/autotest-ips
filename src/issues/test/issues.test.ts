@@ -23,10 +23,30 @@ describe('Issue actions test', () => {
         await browser.url('https://github.com/nimatat387/Testing-proba/issues')
     })
 
-    it('issue should be created with title and comment',async () => {
+    it('issue should be created with title, comment and tag',async () => {
         await issueListPage.getNewIssue()
         await issueCardPage.getIssueWithTitle(issueValid.issueTitle)
         await issueCardPage.getIssueWithComment(issueValid.issueComment!)
+        await issueCardPage.selectLabelBug()
         await issueCardPage.getIssueSubmit()
+        const issueIdCard: string = await issueCardPage.getIssueId()
+        await issueListPage.open()
+        const issueIdList: string = await issueListPage.getIssueId()
+
+        expect(issueIdCard).toEqual(issueIdList)
+    })
+
+    it.only('issue should be created with attach',async () => {
+        await issueListPage.getNewIssue()
+        await issueCardPage.getIssueWithTitle(issue.issueTitle)
+        await issueCardPage.uploadFile(issue)
+        await issueCardPage.getIssueSubmit()
+
+       // expect(issueIdCard).toEqual(issueIdList)
+    })
+
+    after(async () => {
+        //удалить все созданные задачи
+        await browser.reloadSession()
     })
 })

@@ -1,8 +1,9 @@
 import {ChainablePromiseElement} from 'webdriverio'
+import {LOGIN} from '../../../credential'
 
 class IssueListPage {
     protected browser: WebdriverIO.Browser
-    protected url = 'https://github.com/nimatat387/Testing-proba/issues'
+    protected url = `https://github.com/${LOGIN}/Testing-proba/issues`
 
     constructor(browser: WebdriverIO.Browser) {
         this.browser = browser
@@ -15,8 +16,25 @@ class IssueListPage {
         await this.getNewIssueButton().click()
     }
 
+    public async getIssueId(): Promise<string> {
+        let issueString = await this.getIssueNumberText().getText()
+        let issueNumberArr = issueString.match(/\#(\d)*/g)
+        if (issueNumberArr !== null) {
+            return issueNumberArr[0]
+        }
+        return 'Error'
+    }
+
+    public async open(): Promise<void> {
+        await this.browser.url(this.url)
+    }
+
     private getNewIssueButton(): ChainablePromiseElement<WebdriverIO.Element> {
         return this.browser.$( '//*[contains(@class,"btn btn-primary")]')
+    }
+
+    private getIssueNumberText(): ChainablePromiseElement<WebdriverIO.Element> {
+        return this.browser.$('//*[@class="opened-by"]')
     }
 }
 export {

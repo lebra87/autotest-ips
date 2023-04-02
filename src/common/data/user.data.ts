@@ -27,14 +27,14 @@ const userDataValid: UserData = {
     userName: `user-${getTimeStamp()}`,
     userBio: `bio-${getTimeStamp()}`,
     userPronouns: Pronouns.SHE_HER,
-    userAvatar: 'src/users/common/data/img_jpg.jpg'
+    userAvatar: 'src/common/data/img_jpg.jpg'
 }
 
 const userDataInvalid: UserData = {
     login: 'nimatat388',
     email: 'niv@mk.ty',
     password: '95eweq',
-    userAvatar: 'src/users/common/data/img_png.png'
+    userAvatar: 'src/common/data/img_png.png'
 }
 
 // const userSettings: UserData = {
