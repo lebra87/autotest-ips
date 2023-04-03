@@ -3,7 +3,6 @@ import {IssueModel} from '../model/issue.model'
 
 class IssueCardPage {
     protected browser: WebdriverIO.Browser
-    //protected url = 'https://github.com/nimatat387/Testing-proba/issues'
 
     constructor(browser: WebdriverIO.Browser) {
         this.browser = browser
@@ -39,16 +38,26 @@ class IssueCardPage {
         await this.getIssueAttach().setValue(file)
     }
 
+    public isAttachLink(): Promise<boolean> {
+        return this.getAttachLink().isClickable()
+    }
+
+    public async setEditIssueTitle(issue: string): Promise<void> {
+        await this.getEditIssueTitleButton().click()
+        await this.getIssueWithTitle(issue)
+        await this.getSaveIssueTitleButton().click()
+    }
+
     private getSubmitNewIssueButton(): ChainablePromiseElement<WebdriverIO.Element> {
-        return this.browser.$( '//*[contains(@class,"btn-primary btn ml-2")]')
+        return this.browser.$('//*[contains(@class,"btn-primary btn ml-2")]')
     }
 
     private getIssueTitle(): ChainablePromiseElement<WebdriverIO.Element> {
-        return this.browser.$( '//*[@id="issue_title"]')
+        return this.browser.$('//*[@id="issue_title"]')
     }
 
     private getIssueComment(): ChainablePromiseElement<WebdriverIO.Element> {
-        return this.browser.$( '//*[@id="issue_body"]')
+        return this.browser.$('//*[@id="issue_body"]')
     }
 
     private getIssueLabel(): ChainablePromiseElement<WebdriverIO.Element> {
@@ -67,10 +76,23 @@ class IssueCardPage {
         return this.browser.$('//*[contains(@class,"f1-light")]')
     }
 
-    private getIssueAttach(): ChainablePromiseElement<WebdriverIO.Element>  {
+    private getIssueAttach(): ChainablePromiseElement<WebdriverIO.Element> {
         return this.browser.$('//*[@id="fc-issue_body"]')
     }
+
+    private getAttachLink(): ChainablePromiseElement<WebdriverIO.Element> {
+        return this.browser.$('//*[contains(@class,"d-block comment-body")]')
+    }
+
+    private getEditIssueTitleButton(): ChainablePromiseElement<WebdriverIO.Element> {
+        return this.browser.$('//*[@aria-label="Edit Issue title"]')
+    }
+
+    private getSaveIssueTitleButton(): ChainablePromiseElement<WebdriverIO.Element> {
+        return this.browser.$('//*[@data-disable-with="Updating"]')
+    }
 }
+
 export {
     IssueCardPage,
 }
