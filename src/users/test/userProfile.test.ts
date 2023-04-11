@@ -4,13 +4,12 @@ import {LoginPage} from '../page-object/Login.page'
 import {userDataInvalid, userDataValid} from '../../common/data/user.data'
 import {createUserModel, UserModel} from '../model/user.model'
 import {getTimeStamp} from '../../common/getTimeStamp'
+import {UserAPIService} from '../../common/api/api-service/UserAPIService'
 
 describe('User settings test', () => {
     let loginPage: LoginPage
     let userSettingsPage: SettingsProfilePage
     let userPublicPage: PublicProfilePage
-    //const filePathValid = 'src/common/data/img_jpg.jpg'
-    //const filePathInvalid = 'src/common/data/img_png.png'
     const userValid: UserModel = createUserModel(userDataValid)
     let userName: string = getTimeStamp()
     let userBio: string = getTimeStamp()
@@ -22,6 +21,7 @@ describe('User settings test', () => {
 
         await loginPage.open()
         await loginPage.login(userValid)
+        await UserAPIService.updateAuthentificatedUser()
         await browser.url('https://github.com/settings/profile')
     })
 

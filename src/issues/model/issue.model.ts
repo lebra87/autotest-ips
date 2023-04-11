@@ -4,6 +4,7 @@ type IssueModel = {
     issueTitle: string,
     issueComment?: string,
     issueAttach?: string,
+    issueState?: string,
 }
 
 function createIssueModel(issueData: IssueData): IssueModel {
@@ -11,6 +12,7 @@ function createIssueModel(issueData: IssueData): IssueModel {
         issueTitle: issueData.issueTitle,
         issueComment: issueData.issueComment,
         issueAttach: issueData.issueAttach,
+        issueState: issueData.issueState,
     }
 }
 export {

@@ -16,8 +16,13 @@ class IssueCardPage {
         await this.getSubmitNewIssueButton().click()
     }
 
-    public getIssueId(): Promise<string> {
-        return this.getIssueNumber().getText()
+    public async getIssueId(): Promise<string> {
+        let issueId = await this.getIssueNumber().getText()
+        let issueNumber = issueId.match(/(\d)*/g)
+        if (issueNumber !== null) {
+            return issueNumber[0]
+        }
+        return 'Error'
     }
 
     public async getIssueWithComment(issue: string): Promise<void> {

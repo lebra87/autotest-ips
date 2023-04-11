@@ -1,5 +1,6 @@
 import {ChainablePromiseElement} from 'webdriverio'
 import {UserModel} from '../model/user.model'
+import {Reporter} from '../../common/reporter/Reporter'
 
 class LoginPage {
     protected browser: WebdriverIO.Browser
@@ -14,6 +15,7 @@ class LoginPage {
     }
 
     public async login(user: UserModel): Promise<void> {
+        Reporter.addStep('Подождать отображения поля Login')
         await  this.getLogin().waitForDisplayed({
             timeoutMsg: 'Login field was not displayed',
         })
@@ -27,14 +29,17 @@ class LoginPage {
     }
 
     public async setLogin(login: string): Promise<void> {
+        Reporter.addStep('Ввести логин')
         await this.getLogin().setValue(login)
     }
 
     public async setPassword(password: string): Promise<void> {
+        Reporter.addStep('Ввести пароль')
         await this.getPassword().setValue(password)
     }
 
     public async submit(): Promise<void> {
+        Reporter.addStep('Залогиниться')
         await this.getSubmitButton().click()
     }
 

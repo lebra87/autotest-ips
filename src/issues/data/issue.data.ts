@@ -6,6 +6,7 @@ type IssueData = {
     issueComment?: string,
     issueAttach?: string,
     issueLabel?: Labels,
+    issueState?: string,
 }
 
 enum Labels {
@@ -24,6 +25,7 @@ const issueValid: IssueData = {
     issueTitle: `issue-${getGenerateString(10)}`,
     issueComment: `comment-${getGenerateString(10)}`,
     issueAttach: 'src/issues/data/test_attach.docx',
+    issueState: 'open',
 }
 export {
     IssueData,
