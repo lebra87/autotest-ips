@@ -1,5 +1,6 @@
 import {ChainablePromiseElement} from 'webdriverio'
 import {LOGIN} from '../../../credential'
+import {IssueModel} from '../model/issue.model'
 
 class IssueListPage {
     protected browser: WebdriverIO.Browser
@@ -14,6 +15,10 @@ class IssueListPage {
             timeoutMsg: 'Button New issue was not clickable',
         })
         await this.getNewIssueButton().click()
+    }
+
+    public isIssueDisplayed(issue: IssueModel): Promise<boolean> {
+        return this.getIssueTitle(issue.title).isDisplayed()
     }
 
     public async getIssueId(): Promise<string> {
@@ -35,6 +40,10 @@ class IssueListPage {
 
     private getIssueNumberText(): ChainablePromiseElement<WebdriverIO.Element> {
         return this.browser.$('//*[@class="opened-by"]')
+    }
+
+    private getIssueTitle(title: string): ChainablePromiseElement<WebdriverIO.Element> {
+        return this.browser.$(`//*[text()="${title}"]`)
     }
 }
 export {

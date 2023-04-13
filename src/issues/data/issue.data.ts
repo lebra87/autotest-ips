@@ -2,11 +2,11 @@ import {getGenerateString} from '../../common/getGenerateString'
 
 
 type IssueData = {
-    issueTitle: string,
-    issueComment?: string,
-    issueAttach?: string,
+    title: string,
+    comment?: string,
+    attach?: string,
     issueLabel?: Labels,
-    issueState?: string,
+    state?: string,
 }
 
 enum Labels {
@@ -21,13 +21,16 @@ enum Labels {
     wontfix,
 }
 
-const issueValid: IssueData = {
-    issueTitle: `issue-${getGenerateString(10)}`,
-    issueComment: `comment-${getGenerateString(10)}`,
-    issueAttach: 'src/issues/data/test_attach.docx',
-    issueState: 'open',
+function createIssueData(): IssueData {
+    return {
+        title: `issue-${getGenerateString(10)}`,
+        comment: `comment-${getGenerateString(10)}`,
+        attach: 'src/issues/data/test_attach.docx',
+        state: 'open',
+    }
 }
+
 export {
     IssueData,
-    issueValid,
+    createIssueData,
 }

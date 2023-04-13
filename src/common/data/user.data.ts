@@ -30,11 +30,16 @@ const userDataValid: UserData = {
     userAvatar: 'src/common/data/img_jpg.jpg'
 }
 
-const userDataInvalid: UserData = {
-    login: 'nimatat388',
-    email: 'niv@mk.ty',
-    password: '95eweq',
-    userAvatar: 'src/common/data/img_png.png'
+const userInvalidAvatar: string = 'src/common/data/img_png.png'
+
+const userEmptyProfile: UserData = {
+    login: LOGIN,
+    email: EMAIL,
+    password: PASSWORD,
+    userName: '',
+    userBio: '',
+    userPronouns: Pronouns.SHE_HER,
+    userAvatar: 'src/common/data/img_jpg.jpg'
 }
 
 // const userSettings: UserData = {
@@ -46,7 +51,8 @@ const userDataInvalid: UserData = {
 export {
     UserData,
     userDataValid,
-    userDataInvalid,
+    userInvalidAvatar,
+    userEmptyProfile,
     //userSettings,
     Pronouns,
 }

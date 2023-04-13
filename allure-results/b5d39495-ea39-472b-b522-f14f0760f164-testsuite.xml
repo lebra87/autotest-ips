@@ -1,0 +1,171 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1681399897010' stop='1681399914089'>
+    <name>Login form test</name>
+    <title>Login form test</title>
+    <test-cases>
+        <test-case start='1681399897011' status='passed' stop='1681399902373'>
+            <name>user should be logged in with username</name>
+            <title>user should be logged in with username</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+            </parameters>
+            <steps>
+                <step start='1681399898094' status='passed' stop='1681399898094'>
+                    <name>Ввести логин</name>
+                    <title>Ввести логин</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1681399898205' status='passed' stop='1681399898205'>
+                    <name>Ввести пароль</name>
+                    <title>Ввести пароль</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1681399898299' status='passed' stop='1681399898299'>
+                    <name>Залогиниться</name>
+                    <title>Залогиниться</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='b5cc747a-f208-4356-9982-9c304664a250-attachment.png' type='image/png' size='109798'/>
+            </attachments>
+        </test-case>
+        <test-case start='1681399902373' status='passed' stop='1681399908936'>
+            <name>user should be log in with email</name>
+            <title>user should be log in with email</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+            </parameters>
+            <steps>
+                <step start='1681399903887' status='passed' stop='1681399903887'>
+                    <name>Ввести логин</name>
+                    <title>Ввести логин</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1681399904097' status='passed' stop='1681399904097'>
+                    <name>Ввести пароль</name>
+                    <title>Ввести пароль</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1681399904299' status='passed' stop='1681399904299'>
+                    <name>Залогиниться</name>
+                    <title>Залогиниться</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='4158c03c-9813-40ba-bb11-8801a61fc604-attachment.png' type='image/png' size='109798'/>
+            </attachments>
+        </test-case>
+        <test-case start='1681399908936' status='passed' stop='1681399911777'>
+            <name>block with the error should be displayed with wrong login and password</name>
+            <title>block with the error should be displayed with wrong login and password</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+            </parameters>
+            <steps>
+                <step start='1681399909938' status='passed' stop='1681399909938'>
+                    <name>Ввести логин</name>
+                    <title>Ввести логин</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1681399910050' status='passed' stop='1681399910050'>
+                    <name>Ввести пароль</name>
+                    <title>Ввести пароль</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1681399910133' status='passed' stop='1681399910133'>
+                    <name>Залогиниться</name>
+                    <title>Залогиниться</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='dc58e196-124d-4e00-9944-a2870d05faff-attachment.png' type='image/png' size='24094'/>
+            </attachments>
+        </test-case>
+        <test-case start='1681399911778' status='passed' stop='1681399914087'>
+            <name>block with the error should be displayed with empty login and password</name>
+            <title>block with the error should be displayed with empty login and password</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+            </parameters>
+            <steps>
+                <step start='1681399912619' status='passed' stop='1681399912619'>
+                    <name>Залогиниться</name>
+                    <title>Залогиниться</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='485ec0d5-c813-4ec2-a1a5-ff4c2412d875-attachment.png' type='image/png' size='23176'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,15 +1,17 @@
+import {UserModel} from '../../../users/model/user.model'
+
 type UpdateUserRequest = {
-    name: string,
-    bio: string,
+    name?: string,
+    bio?: string,
     // userPronouns?: Pronouns,
     // userAvatar?: string,
 }
 
 class UserAPIDataProvider {
-    public static getDeletedUserData(): UpdateUserRequest {
+    public static getDeletedUserData(user: UserModel): UpdateUserRequest {
         return {
-            name: '',
-            bio: '',
+            name: user.userName,
+            bio: user.userBio,
         }
     }
 }

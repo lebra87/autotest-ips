@@ -1,18 +1,18 @@
 import {IssueData} from '../data/issue.data'
 
 type IssueModel = {
-    issueTitle: string,
-    issueComment?: string,
-    issueAttach?: string,
-    issueState?: string,
+    title: string,
+    comment?: string,
+    attach?: string,
+    state?: string,
 }
 
 function createIssueModel(issueData: IssueData): IssueModel {
     return {
-        issueTitle: issueData.issueTitle,
-        issueComment: issueData.issueComment,
-        issueAttach: issueData.issueAttach,
-        issueState: issueData.issueState,
+        title: issueData.title,
+        comment: issueData.comment,
+        attach: issueData.attach,
+        state: issueData.state,
     }
 }
 export {

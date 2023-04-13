@@ -51,12 +51,12 @@ class SettingsProfilePage {
         })
     }
 
-    public async uploadFile(filePath: UserModel): Promise<void> {
+    public async uploadFile(filePath: string): Promise<void> {
         await this.getInputFile().waitForExist({
             timeoutMsg: 'File input field was not exist',
         })
         await this.showHiddenFileInput(this.browser)
-        const file: string = await this.browser.uploadFile(filePath.userAvatar!)
+        const file: string = await this.browser.uploadFile(filePath)
         await this.getInputFile().setValue(file)
     }
 

@@ -3,7 +3,7 @@ import {AxiosRequestConfig, AxiosResponse} from 'axios'
 import {UpdateUserRequest} from '../api-data-provider/UserAPIDataProvider'
 
 class UserAPIProvider extends GitAPIProvider {
-    public updateAuthentificatedUser<T>(data: UpdateUserRequest): Promise<AxiosResponse<T>> {
+    public updateAuthenticatedUser<T>(data: UpdateUserRequest): Promise<AxiosResponse<T>> {
         const apiRequest: AxiosRequestConfig = UserAPIProvider.configureRequest(
             '/user',
             'PATCH',

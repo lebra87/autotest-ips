@@ -11,6 +11,7 @@ class LoginPage {
     }
 
     public async isErrorMessage(): Promise<boolean> {
+        Reporter.addStep('Отображается ли сообщение об ошибке')
         return this.getErrorMessage().isDisplayed()
     }
 

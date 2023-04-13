@@ -1,7 +1,7 @@
 import {SettingsProfilePage} from '../page-object/SettingsProfile.page'
 import {PublicProfilePage} from '../page-object/PublicProfile.page'
 import {LoginPage} from '../page-object/Login.page'
-import {userDataInvalid, userDataValid} from '../../common/data/user.data'
+import {userEmptyProfile, userInvalidAvatar} from '../../common/data/user.data'
 import {createUserModel, UserModel} from '../model/user.model'
 import {getTimeStamp} from '../../common/getTimeStamp'
 import {UserAPIService} from '../../common/api/api-service/UserAPIService'
@@ -10,7 +10,7 @@ describe('User settings test', () => {
     let loginPage: LoginPage
     let userSettingsPage: SettingsProfilePage
     let userPublicPage: PublicProfilePage
-    const userValid: UserModel = createUserModel(userDataValid)
+    const user: UserModel = createUserModel(userEmptyProfile)
     let userName: string = getTimeStamp()
     let userBio: string = getTimeStamp()
 
@@ -20,8 +20,8 @@ describe('User settings test', () => {
         userPublicPage = new PublicProfilePage(browser)
 
         await loginPage.open()
-        await loginPage.login(userValid)
-        await UserAPIService.updateAuthentificatedUser()
+        await loginPage.login(user)
+        await UserAPIService.updateAuthenticatedUser(userEmptyProfile)
         await browser.url('https://github.com/settings/profile')
     })
 
@@ -30,17 +30,19 @@ describe('User settings test', () => {
     })
 
     it('change user name', async () => {
-        await userSettingsPage.setUserName(userName)
+        user.userName = userName
+        await userSettingsPage.setUserName(user.userName)
         await userPublicPage.open()
 
-        expect(await userPublicPage.setName()).toEqual(userName)
+        expect(await userPublicPage.setName()).toEqual(user.userName)
     })
 
     it('change user bio', async () => {
-        await userSettingsPage.setUserBio(userBio)
+        user.userBio = userBio
+        await userSettingsPage.setUserBio(user.userBio)
         await userPublicPage.open()
 
-        expect(await userPublicPage.setBio()).toEqual(userBio)
+        expect(await userPublicPage.setBio()).toEqual(user.userBio)
     })
 
     it('dropdown with Public email is blocking', async () => {
@@ -49,15 +51,15 @@ describe('User settings test', () => {
         expect(await userSettingsPage.isPublicEmail()).toEqual(false)
     })
 
-    it('choise pronounce', async () => {
-        await userSettingsPage.setUserPronouns(userValid)
+    it('choice pronounce', async () => {
+        await userSettingsPage.setUserPronouns(user)
         await userPublicPage.open()
 
-        expect(await userPublicPage.getPronounceText()).toEqual(userValid.userPronouns)
+        expect(await userPublicPage.getPronounceText()).toEqual(user.userPronouns)
     })
 
     it('photo should be uploaded in profile', async () => {
-        await userSettingsPage.uploadFile(userValid)
+        await userSettingsPage.uploadFile(user.userAvatar!)
         await userSettingsPage.setPicture()
         await userPublicPage.open()
         const srcAvatar: string = 'https://avatars.githubusercontent.com/u/127432101?v=4'
@@ -66,8 +68,9 @@ describe('User settings test', () => {
     })
 
     it('photo should not be uploaded in profile', async () => {
-        await userSettingsPage.uploadFile(userDataInvalid)
+        await userSettingsPage.uploadFile(userInvalidAvatar)
         await browser.pause(1000)
+
         expect(await userSettingsPage.getErrorUploadAvatar()).toEqual(true)
     })
 

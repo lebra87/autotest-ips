@@ -25,20 +25,20 @@ describe('POST /repos/{owner}/{repo}/issues', () => {
             user.login,
             REPO,
             {
-                title: issue.issueTitle,
+                title: issue.title,
             },
         )
 
         expect(response.status).toEqual(201)
-        expect(response.data.title).toEqual(issue.issueTitle)
-        expect(response.data.state).toEqual(issue.issueState)
+        expect(response.data.title).toEqual(issue.title)
+        expect(response.data.state).toEqual(issue.state)
 
         const responseList: AxiosResponse<IssueListResponse[]> = await issueAPIProvider.listIssue(
             user.login,
             REPO,
         )
 
-       expect(responseList.data.some(value => value.title === issue.issueTitle)).toEqual(true)
+       expect(responseList.data.some(value => value.title === issue.title)).toEqual(true)
     })
 
     it('issue should not be created in other repository with status 410', async () => {
@@ -47,7 +47,7 @@ describe('POST /repos/{owner}/{repo}/issues', () => {
             'lebra87',
             'lebra-public-repo',
             {
-                title: issue.issueTitle
+                title: issue.title
             },
         )
 
@@ -60,7 +60,7 @@ describe('POST /repos/{owner}/{repo}/issues', () => {
             user.login,
             'lebra-public-repo',
             {
-                title: issue.issueTitle
+                title: issue.title
             },
         )
 

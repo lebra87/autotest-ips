@@ -8,8 +8,13 @@ class IssueCardPage {
         this.browser = browser
     }
 
-    public async getIssueWithTitle(issue: string): Promise<void> {
-        await this.getIssueTitle().setValue(issue)
+    public async setIssueWithTitle(issue: string): Promise<void> {
+        await this.getInputIssueTitle().setValue(issue)
+    }
+
+    public async getIssueTitleText(): Promise<string> {
+        await this.getIssueTitle().waitForDisplayed()
+        return this.getIssueTitle().getText()
     }
 
     public async getIssueSubmit(): Promise<void> {
@@ -39,7 +44,7 @@ class IssueCardPage {
         await this.getIssueAttach().waitForExist({
             timeoutMsg: 'File input field was not exist',
         })
-        const file: string = await this.browser.uploadFile(filePath.issueAttach!)
+        const file: string = await this.browser.uploadFile(filePath.attach!)
         await this.getIssueAttach().setValue(file)
     }
 
@@ -49,7 +54,7 @@ class IssueCardPage {
 
     public async setEditIssueTitle(issue: string): Promise<void> {
         await this.getEditIssueTitleButton().click()
-        await this.getIssueWithTitle(issue)
+        await this.setIssueWithTitle(issue)
         await this.getSaveIssueTitleButton().click()
     }
 
@@ -57,8 +62,12 @@ class IssueCardPage {
         return this.browser.$('//*[contains(@class,"btn-primary btn ml-2")]')
     }
 
-    private getIssueTitle(): ChainablePromiseElement<WebdriverIO.Element> {
+    private getInputIssueTitle(): ChainablePromiseElement<WebdriverIO.Element> {
         return this.browser.$('//*[@id="issue_title"]')
+    }
+
+    private getIssueTitle(): ChainablePromiseElement<WebdriverIO.Element> {
+        return this.browser.$('//bdi[contains(@class,"js-issue-title")]')
     }
 
     private getIssueComment(): ChainablePromiseElement<WebdriverIO.Element> {
@@ -95,6 +104,10 @@ class IssueCardPage {
 
     private getSaveIssueTitleButton(): ChainablePromiseElement<WebdriverIO.Element> {
         return this.browser.$('//*[@data-disable-with="Updating"]')
+    }
+
+    private getLockIcon(): ChainablePromiseElement<WebdriverIO.Element> {
+        return this.browser.$('//*[contains(@id,"event")]//*[contains(@class, "octicon-lock") and name()="svg"]')
     }
 }
 

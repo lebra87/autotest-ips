@@ -1,0 +1,87 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1681400817076' stop='1681400820048'>
+    <name>POST /repos/{owner}/{repo}/issues</name>
+    <title>POST /repos/{owner}/{repo}/issues</title>
+    <test-cases>
+        <test-case start='1681400817077' status='passed' stop='1681400818607'>
+            <name>issue should be created with status 201</name>
+            <title>issue should be created with status 201</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='78291d3f-8731-4286-8244-4a75454ab0e2-attachment.png' type='image/png' size='4861'/>
+            </attachments>
+        </test-case>
+        <test-case start='1681400818607' status='passed' stop='1681400819032'>
+            <name>issue should not be created in other repository with status 410</name>
+            <title>issue should not be created in other repository with status 410</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='6560c7f3-9d22-48ed-8bac-45fd0c31666d-attachment.png' type='image/png' size='4861'/>
+            </attachments>
+        </test-case>
+        <test-case start='1681400819032' status='passed' stop='1681400819599'>
+            <name>issue should not be created with undefinded repository with status 404</name>
+            <title>issue should not be created with undefinded repository with status 404</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='e0b94261-47ce-4403-b2e3-38ca4b5d775c-attachment.png' type='image/png' size='4861'/>
+            </attachments>
+        </test-case>
+        <test-case start='1681400819599' status='passed' stop='1681400820048'>
+            <name>issue should not be created with status 422</name>
+            <title>issue should not be created with status 422</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='63daafc3-cec4-4723-a7e2-afb7e2735a7c-attachment.png' type='image/png' size='4861'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
