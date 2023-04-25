@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1681831422553' stop='1681831524972'>
+    <name>Issue actions test</name>
+    <title>Issue actions test</title>
+    <test-cases>
+        <test-case start='1681831422554' status='passed' stop='1681831432481'>
+            <name>issue should not be created without title</name>
+            <title>issue should not be created without title</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+            </parameters>
+            <steps>
+                <step start='1681831423994' status='passed' stop='1681831423994'>
+                    <name>Подождать отображения поля Login</name>
+                    <title>Подождать отображения поля Login</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='268d03d3-9b3e-4125-acd1-681989481d77-attachment.png' type='image/png' size='67459'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

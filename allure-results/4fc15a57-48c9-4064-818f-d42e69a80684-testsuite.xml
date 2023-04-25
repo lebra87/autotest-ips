@@ -1,0 +1,63 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1681832148350' stop='1681832221389'>
+    <name>Issue actions test: create issue</name>
+    <title>Issue actions test: create issue</title>
+    <test-cases>
+        <test-case start='1681832148350' status='passed' stop='1681832162667'>
+            <name>issue should be created with title, comment and tag</name>
+            <title>issue should be created with title, comment and tag</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='998a3481-45d0-49b8-b412-34ef579cfd7e-attachment.png' type='image/png' size='74255'/>
+            </attachments>
+        </test-case>
+        <test-case start='1681832162668' status='passed' stop='1681832175067'>
+            <name>issue should be created with attach</name>
+            <title>issue should be created with attach</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='a9e2acd5-7c41-4cb4-9d90-ba56cf15bde8-attachment.png' type='image/png' size='73644'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

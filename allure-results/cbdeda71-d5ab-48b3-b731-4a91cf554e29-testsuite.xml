@@ -1,0 +1,42 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1681832527377' stop='1681832552202'>
+    <name>Issue actions test: delete issue</name>
+    <title>Issue actions test: delete issue</title>
+    <test-cases>
+        <test-case start='1681832527378' status='broken' stop='1681832552200'>
+            <name>issue should be deleted</name>
+            <title>issue should be deleted</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='2ecd3bd4-7fe4-47b5-9e20-112c06b2ddb9-attachment.png' type='image/png' size='71250'/>
+            </attachments>
+            <failure>
+                <message>Button block was not clickable</message>
+                <stack-trace>Error: Button block was not clickable
+                    at C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\webdriverio\build\commands\browser\waitUntil.js:66:23
+                    at async Element.wrapCommandFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.elementErrorHandlerCallbackFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\webdriverio\build\middlewares.js:24:32)
+                    at async Element.wrapCommandFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.wrapCommandFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.elementErrorHandlerCallbackFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\webdriverio\build\middlewares.js:24:32)
+                    at async Element.wrapCommandFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\@wdio\utils\build\shim.js:137:29)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

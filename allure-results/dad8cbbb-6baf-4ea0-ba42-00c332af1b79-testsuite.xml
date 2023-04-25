@@ -1,0 +1,70 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1681647067383' stop='1681647084132'>
+    <name>Issue actions test</name>
+    <title>Issue actions test</title>
+    <test-cases>
+        <test-case start='1681647067384' status='passed' stop='1681647078793'>
+            <name>issue should be created with title, comment and tag</name>
+            <title>issue should be created with title, comment and tag</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+            </parameters>
+            <steps>
+                <step start='1681647069236' status='passed' stop='1681647069236'>
+                    <name>Подождать отображения поля Login</name>
+                    <title>Подождать отображения поля Login</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Screenshot' source='adf9afe9-49a4-4154-b4dd-d6e6ac760fdf-attachment.png' type='image/png' size='68999'/>
+            </attachments>
+        </test-case>
+        <test-case start='1681647078793' status='passed' stop='1681647084131'>
+            <name>issue should be created with attach</name>
+            <title>issue should be created with attach</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='60c0c53b-7f6e-4a42-bbd4-3703f2bae293-attachment.png' type='image/png' size='87091'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

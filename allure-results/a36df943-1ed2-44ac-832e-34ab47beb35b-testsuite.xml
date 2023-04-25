@@ -1,0 +1,46 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1681648800456' stop='1681648826554'>
+    <name>Issue actions test: change issue</name>
+    <title>Issue actions test: change issue</title>
+    <test-cases>
+        <test-case start='1681648800456' status='broken' stop='1681648826552'>
+            <name>"after each" hook for Issue actions test</name>
+            <title>"after each" hook for Issue actions test</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='2f096bc2-ef10-4e99-bcaf-6b05f67a0cf1-attachment.png' type='image/png' size='87314'/>
+            </attachments>
+            <failure>
+                <message>Can't call click on element with selector "//*[text()="issue-sz2WMSkM4z"]" because element wasn't found</message>
+                <stack-trace>Error: Can't call click on element with selector "//*[text()="issue-sz2WMSkM4z"]" because element wasn't found
+                    at implicitWait (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\webdriverio\build\utils\implicitWait.js:34:19)
+                    at async Element.elementErrorHandlerCallbackFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\webdriverio\build\middlewares.js:20:29)
+                    at async Element.wrapCommandFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\@wdio\utils\build\shim.js:137:29)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

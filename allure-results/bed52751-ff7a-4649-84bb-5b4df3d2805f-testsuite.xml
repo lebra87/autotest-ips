@@ -1,0 +1,46 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1681449297580' stop='1681449299710'>
+    <name>Issue actions test: change issue</name>
+    <title>Issue actions test: change issue</title>
+    <test-cases>
+        <test-case start='1681449297581' status='broken' stop='1681449299710'>
+            <name>issue should be blocked</name>
+            <title>issue should be blocked</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='938bee90-d61d-49ee-93d1-6f325b242f11-attachment.png' type='image/png' size='63208'/>
+            </attachments>
+            <failure>
+                <message>element not interactable
+                  (Session info: chrome=111.0.5563.111)</message>
+                <stack-trace>element not interactable: element not interactable
+                  (Session info: chrome=111.0.5563.111)
+                    at getErrorFromResponseBody (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\webdriver\build\utils.js:198:12)
+                    at NodeJSRequest._request (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\webdriver\build\request\index.js:166:60)
+                    at async Element.wrapCommandFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.wrapCommandFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.elementErrorHandlerCallbackFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\webdriverio\build\middlewares.js:24:32)
+                    at async Element.wrapCommandFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.wrapCommandFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.elementErrorHandlerCallbackFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\webdriverio\build\middlewares.js:24:32)
+                    at async Element.wrapCommandFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\@wdio\utils\build\shim.js:137:29)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1681462524949' stop='1681462527433'>
+    <name>Issue actions test: change issue</name>
+    <title>Issue actions test: change issue</title>
+    <test-cases>
+        <test-case start='1681462524950' status='passed' stop='1681462527432'>
+            <name>issue should be closed</name>
+            <title>issue should be closed</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='30057279-625f-48ab-8208-4673c0275257-attachment.png' type='image/png' size='78456'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

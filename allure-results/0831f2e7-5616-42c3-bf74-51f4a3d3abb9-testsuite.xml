@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1681831043578' stop='1681831057277'>
+    <name>Issue actions test</name>
+    <title>Issue actions test</title>
+    <test-cases>
+        <test-case start='1681831043579' status='passed' stop='1681831048325'>
+            <name>"before all" hook for Issue actions test</name>
+            <title>"before all" hook for Issue actions test</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+            </parameters>
+            <steps>
+                <step start='1681831045151' status='passed' stop='1681831045151'>
+                    <name>Подождать отображения поля Login</name>
+                    <title>Подождать отображения поля Login</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

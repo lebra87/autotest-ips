@@ -1,0 +1,110 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1681811774699' stop='1681811823083'>
+    <name>Issue actions test: Issue actions test: change issue</name>
+    <title>Issue actions test: Issue actions test: change issue</title>
+    <test-cases>
+        <test-case start='1681811774699' status='passed' stop='1681811785316'>
+            <name>issue should be edited title</name>
+            <title>issue should be edited title</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='f3b3c4a0-fabd-47d2-9937-2b4ced18d558-attachment.png' type='image/png' size='73139'/>
+            </attachments>
+        </test-case>
+        <test-case start='1681811785317' status='passed' stop='1681811797129'>
+            <name>issue should be blocked</name>
+            <title>issue should be blocked</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='d53e2d0a-7650-420b-8841-8a50342d94af-attachment.png' type='image/png' size='77134'/>
+            </attachments>
+        </test-case>
+        <test-case start='1681811797130' status='broken' stop='1681811823079'>
+            <name>"after each" hook for Issue actions test</name>
+            <title>"after each" hook for Issue actions test</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='fb23e261-4c26-44ed-8520-fae19865b17f-attachment.png' type='image/png' size='68722'/>
+            </attachments>
+            <failure>
+                <message>Can't call click on element with selector "//*[text()="issue-xkD11Bdex1"]" because element wasn't found</message>
+                <stack-trace>Error: Can't call click on element with selector "//*[text()="issue-xkD11Bdex1"]" because element wasn't found
+                    at implicitWait (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\webdriverio\build\utils\implicitWait.js:34:19)
+                    at async Element.elementErrorHandlerCallbackFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\webdriverio\build\middlewares.js:20:29)
+                    at async Element.wrapCommandFn (C:\Users\lebra\Documents\GitHub\autotest-ips\node_modules\@wdio\utils\build\shim.js:137:29)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

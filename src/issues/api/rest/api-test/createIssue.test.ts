@@ -1,5 +1,4 @@
 import {createIssueModel, IssueModel} from '../../../model/issue.model'
-import {issueValid} from '../../../data/issue.data'
 import {IssueAPIProvider} from '../../../../common/api/api-provider/IssueAPIProvider'
 import {createUserModel, UserModel} from '../../../../users/model/user.model'
 import {REPO} from '../../../../../credential'
@@ -15,7 +14,7 @@ describe('POST /repos/{owner}/{repo}/issues', () => {
     let user: UserModel
 
     beforeEach(async () => {
-        issue = createIssueModel(issueValid)
+        issue = createIssueModel(issue)
         user = createUserModel(userDataValid)
     })
 

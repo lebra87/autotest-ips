@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1681453611865' stop='1681453615193'>
+    <name>Issue actions test: change issue</name>
+    <title>Issue actions test: change issue</title>
+    <test-cases>
+        <test-case start='1681453611866' status='failed' stop='1681453615192'>
+            <name>issue should be blocked</name>
+            <title>issue should be blocked</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+                <parameter kind='argument' name='browser' value='chrome-111.0.5563.111'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='11fbf9f3-70dc-4c93-914a-fd1d51a8f2e2-attachment.png' type='image/png' size='203471'/>
+            </attachments>
+            <failure>
+                <message>expect(received).toEqual(expected) // deep equality
+                
+                Expected: true
+                Received: false</message>
+                <stack-trace>Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: true
+                Received: false
+                    at C:\Users\lebra\Documents\GitHub\autotest-ips\src\issues\test\issues.test.ts:72:63
+                    at Generator.next (&lt;anonymous>)
+                    at fulfilled (C:\Users\lebra\Documents\GitHub\autotest-ips\src\issues\test\issues.test.ts:5:58)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1681817694250' stop='1681817701151'>
+    <name>Issue actions test: Issue actions test: change issue</name>
+    <title>Issue actions test: Issue actions test: change issue</title>
+    <test-cases>
+        <test-case start='1681817694250' status='failed' stop='1681817701151'>
+            <name>adding a comment to issue</name>
+            <title>adding a comment to issue</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='e6114ad0-6f84-4cfd-9da7-e581a10a227a-attachment.png' type='image/png' size='66708'/>
+            </attachments>
+            <failure>
+                <message>expect(received).toEqual(expected) // deep equality
+                
+                Expected: true
+                Received: false</message>
+                <stack-trace>Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: true
+                Received: false
+                    at C:\Users\lebra\Documents\GitHub\autotest-ips\src\issues\test\issues.test.ts:89:67
+                    at Generator.next (&lt;anonymous>)
+                    at fulfilled (C:\Users\lebra\Documents\GitHub\autotest-ips\src\issues\test\issues.test.ts:5:58)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

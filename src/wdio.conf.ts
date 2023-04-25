@@ -15,7 +15,7 @@ export const config: WebdriverIO.Config = {
         },
         acceptInsecureCerts: true
     }],
-    logLevel: 'error',
+    logLevel: 'trace',
     waitforTimeout: 20000,
     connectionRetryTimeout: 60000,
     connectionRetryCount: 3,

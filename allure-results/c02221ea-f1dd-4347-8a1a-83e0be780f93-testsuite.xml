@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1681832663432' stop='1681832668890'>
+    <name>Issue actions test: Issue actions test</name>
+    <title>Issue actions test: Issue actions test</title>
+    <test-cases>
+        <test-case start='1681832663433' status='passed' stop='1681832668889'>
+            <name>issue should not be created without title</name>
+            <title>issue should not be created without title</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='f576a350-7a22-4c1c-b891-a887d899d0e2-attachment.png' type='image/png' size='67558'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

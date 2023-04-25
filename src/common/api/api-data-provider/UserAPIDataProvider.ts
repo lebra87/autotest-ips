@@ -3,8 +3,6 @@ import {UserModel} from '../../../users/model/user.model'
 type UpdateUserRequest = {
     name?: string,
     bio?: string,
-    // userPronouns?: Pronouns,
-    // userAvatar?: string,
 }
 
 class UserAPIDataProvider {

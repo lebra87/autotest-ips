@@ -1,10 +1,10 @@
 import {ChainablePromiseElement} from 'webdriverio'
-import {LOGIN} from '../../../credential'
+import {LOGIN, REPO} from '../../../credential'
 import {IssueModel} from '../model/issue.model'
 
 class IssueListPage {
     protected browser: WebdriverIO.Browser
-    protected url = `https://github.com/${LOGIN}/Testing-proba/issues`
+    protected url = `https://github.com/${LOGIN}/${REPO}/issues`
 
     constructor(browser: WebdriverIO.Browser) {
         this.browser = browser
@@ -21,25 +21,16 @@ class IssueListPage {
         return this.getIssueTitle(issue.title).isDisplayed()
     }
 
-    public async getIssueId(): Promise<string> {
-        let issueString = await this.getIssueNumberText().getText()
-        let issueNumberArr = issueString.match(/\#(\d)*/g)
-        if (issueNumberArr !== null) {
-            return issueNumberArr[0]
-        }
-        return 'Error'
+    public async open(parameters?: string): Promise<void> {
+        await this.browser.url(`${this.url}${parameters ?? ''}`)
     }
 
-    public async open(): Promise<void> {
-        await this.browser.url(this.url)
+    public async openIssueCard(issue: IssueModel): Promise<void> {
+        await this.getIssueTitle(issue.title).click()
     }
 
     private getNewIssueButton(): ChainablePromiseElement<WebdriverIO.Element> {
         return this.browser.$( '//*[contains(@class,"btn btn-primary")]')
-    }
-
-    private getIssueNumberText(): ChainablePromiseElement<WebdriverIO.Element> {
-        return this.browser.$('//*[@class="opened-by"]')
     }
 
     private getIssueTitle(title: string): ChainablePromiseElement<WebdriverIO.Element> {

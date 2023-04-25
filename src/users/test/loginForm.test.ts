@@ -1,6 +1,6 @@
 import {LoginPage} from '../page-object/Login.page'
 import {MainPage} from '../page-object/Main.page'
-import {userDataInvalid, userDataValid} from '../../common/data/user.data'
+import {userDataValid} from '../../common/data/user.data'
 import {createUserModel, UserModel} from '../model/user.model'
 
 describe('Login form test', () => {
@@ -36,8 +36,8 @@ describe('Login form test', () => {
     })
 
     it('block with the error should be displayed with wrong login and password', async () => {
-        await loginPage.setLogin(userDataInvalid.login)
-        await loginPage.setPassword(userDataInvalid.password)
+        await loginPage.setLogin('gefewqfe')
+        await loginPage.setPassword('534ewr2f')
         await loginPage.submit()
 
         expect(await loginPage.isErrorMessage()).toEqual(true)

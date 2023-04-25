@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1681832232850' stop='1681832239184'>
+    <name>Issue actions test: delete issue</name>
+    <title>Issue actions test: delete issue</title>
+    <test-cases>
+        <test-case start='1681832232850' status='passed' stop='1681832239184'>
+            <name>issue should be deleted</name>
+            <title>issue should be deleted</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+                <parameter kind='argument' name='browser' value='chrome-112.0.5615.121'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='eb636a64-5272-4220-b08a-697f7a0cbedb-attachment.png' type='image/png' size='73972'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
